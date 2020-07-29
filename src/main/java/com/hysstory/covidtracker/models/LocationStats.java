@@ -1,10 +1,13 @@
 package com.hysstory.covidtracker.models;
 
+import org.springframework.boot.autoconfigure.domain.EntityScan;
+import org.springframework.web.bind.annotation.ModelAttribute;
+
 public class LocationStats {
 
     private String state;
     private int cases;
-    private int death;
+    private int deaths;
 
     public String getState() {
         return state;
@@ -22,8 +25,8 @@ public class LocationStats {
         this.cases = cases;
     }
 
-    public int getDeath() {
-        return death;
+    public int getDeaths() {
+        return deaths;
     }
 
     @Override
@@ -31,12 +34,12 @@ public class LocationStats {
         return "LocationStats{" +
                 "state='" + state + '\'' +
                 ", cases=" + cases +
-                ", death=" + death +
+                ", death=" + deaths +
                 '}';
     }
 
-    public void setDeath(int death) {
-        this.death = death;
+    public void setDeaths(int death) {
+        this.deaths = death;
 
     }
 }
