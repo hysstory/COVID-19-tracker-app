@@ -22,7 +22,7 @@ public class CovidDataService {
     private final static String COVID_DATA_NYTIMES_URL =
             "https://raw.githubusercontent.com/nytimes/covid-19-data/master/live/us-states.csv";
 
-    private List<LocationStats> stats = new ArrayList<>();
+    private List<LocationStats> allStats = new ArrayList<>();
 
     @PostConstruct
     @Scheduled(cron = "* * * 1 * *")
@@ -48,7 +48,9 @@ public class CovidDataService {
             data.setState(record.get("state"));
             data.setCases(Integer.parseInt(record.get("cases")));
             data.setDeath(Integer.parseInt(record.get("deaths")));
-
+            System.out.println(data);
+            stats.add(data);
         }
+        this.allStats = stats;
     }
 }

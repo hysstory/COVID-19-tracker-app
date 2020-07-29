@@ -26,7 +26,17 @@ public class LocationStats {
         return death;
     }
 
+    @Override
+    public String toString() {
+        return "LocationStats{" +
+                "state='" + state + '\'' +
+                ", cases=" + cases +
+                ", death=" + death +
+                '}';
+    }
+
     public void setDeath(int death) {
         this.death = death;
+
     }
 }
