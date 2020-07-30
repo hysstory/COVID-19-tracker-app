@@ -13,14 +13,16 @@
     <h1>Covid Tracker</h1>
     <br>
     <div class="jumbotron">
-        <h1 class="display-4"></h1>
+        <h1 class="display-4" th:text="${totalCases}"}></h1>
+        <p>Total cases reported as of today</p>
     </div>
-    <table>
+    <table class="table table-striped table-bordered table-hover table-sm table-dark">
         <tr>
             <th>State</th>
             <th>Cases</th>
             <th>Deaths</th>
         </tr>
+        </thead>
         <tr th:each="stats : ${stats}">
             <td th:text="${stats.state}">
             <td th:text="${stats.cases}">
