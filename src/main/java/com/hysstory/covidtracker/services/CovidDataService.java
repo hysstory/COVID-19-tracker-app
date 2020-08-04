@@ -29,7 +29,7 @@ public class CovidDataService {
     private List<LocationStats> allStats = new ArrayList<>();
 
     @PostConstruct
-    @Scheduled(cron = "* * * 1 * *")
+    @Scheduled(cron = "* * 6 * * *")
 
     public void fetchCovidData() throws IOException, InterruptedException {
         List<LocationStats> stats = new ArrayList<>();

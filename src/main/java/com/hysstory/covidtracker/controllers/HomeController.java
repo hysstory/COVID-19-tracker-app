@@ -2,7 +2,6 @@ package com.hysstory.covidtracker.controllers;
 
 import com.hysstory.covidtracker.models.LocationStats;
 import com.hysstory.covidtracker.services.CovidDataService;
-import jdk.jshell.execution.LoaderDelegate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
